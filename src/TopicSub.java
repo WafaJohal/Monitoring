@@ -9,7 +9,6 @@ import javax.jms.JMSException;
 import javax.jms.Message;
 import javax.jms.MessageConsumer;
 import javax.jms.MessageListener;
-import javax.jms.MessageProducer;
 import javax.jms.Session;
 import javax.jms.TextMessage;
 import javax.jms.Topic;
@@ -28,11 +27,9 @@ public class TopicSub implements MessageListener {
 	private Topic topic;
 	private String url = "tcp://localhost:61616";
 	private String jmxInfo;
-	private int idSub;
 	private String topicName;
 
 	public TopicSub(String topicName) {
-		this.idSub = idSub;
 		this.topicName = topicName;
 	}
 

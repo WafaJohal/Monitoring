@@ -1,3 +1,7 @@
+import java.lang.management.ManagementFactory;
+
+
+
 public class VirtualNode implements VirtualNodeInterface{
 
 	int id;
@@ -7,6 +11,7 @@ public class VirtualNode implements VirtualNodeInterface{
 	TopicSub sub;
 	String topicParent;
 	String topicChildrens;
+	
 
 	public VirtualNode(int id){
 		this.id = id;
@@ -27,4 +32,22 @@ public class VirtualNode implements VirtualNodeInterface{
 		pub.run();
 		
 	}
+	public void getLocalJMXInfo(){
+		/*com.sun.management.OperatingSystemMXBean mxbean =(com.sun.management.OperatingSystemMXBean) ManagementFactory.getOperatingSystemMXBean();
+
+			// Get the number of processors
+			int numProcessors = mxbean.getAvailableProcessors();
+
+			// Get the Sun-specific attribute Process CPU time
+			long cpuTime = mxbean.getProcessCpuTime();
+	*/
+	}
+	
+	
+	/**every xsecond
+	 * get its info
+	 * get info from childern
+	 * aggreagate
+	 * send to parent
+	 */
 }
